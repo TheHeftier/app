@@ -1,0 +1,42 @@
+﻿@model IEnumerable<WebApplication1.Models.COMPONENTE>
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <meta  http-equiv="refresh" content="1"/>
+    <title>Index</title>
+</head>
+<body>
+    <table class="table" border="1" cellpadding="10" align="center">
+        <tr>
+            <th>
+                Total
+            </th>
+            <th>
+                Disponível
+            </th>
+            <th>
+                CPU
+            </th>
+        </tr>
+    
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => Model.Last().ramTotal)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => Model.Last().ramDispo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => Model.Last().usoCpu)
+            </td>
+        </tr>
+    </table>
+</body>
+</html>
